@@ -32,7 +32,7 @@
  * phase loop and derive the other channel's correction from the same time error.
  * Channel 0 is A', channel 1 is B'.
  */
-#define SIGSEP_COMMON_SOURCE_LOCK      1U
+#define SIGSEP_COMMON_SOURCE_LOCK      0U
 #define SIGSEP_PHASE_MASTER_CH         0U
 
 #define SIGSEP_MIN_VALID_ADC_AMP       120.0f
