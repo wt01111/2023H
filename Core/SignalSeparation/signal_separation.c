@@ -606,23 +606,40 @@ static int32_t Nco_UpdateLock(uint32_t ch, uint32_t measured_phase, uint64_t fra
 {
   uint32_t predicted_phase = Nco_PhaseAtSample(ch, frame_start_sample);
   int32_t phase_error = (int32_t)(measured_phase - predicted_phase);
-  int64_t integrator = nco_state[ch].integrator + (int64_t)phase_error;
+  int64_t integrator = ((nco_state[ch].integrator *
+                         (int64_t)SIGSEP_PLL_INTEGRATOR_LEAK_NUM) /
+                        65536LL) +
+                       (int64_t)phase_error;
   int64_t correction;
+  int64_t integrator_limit;
   int32_t max_corr;
 
-  if (integrator > SIGSEP_PLL_INTEGRATOR_LIMIT)
+  max_corr = (int32_t)(nco_state[ch].nominal_step / SIGSEP_PLL_MAX_CORR_DIV);
+  if (max_corr < 1)
   {
-    integrator = SIGSEP_PLL_INTEGRATOR_LIMIT;
+    max_corr = 1;
   }
-  if (integrator < -SIGSEP_PLL_INTEGRATOR_LIMIT)
+
+  integrator_limit = (int64_t)max_corr *
+                     (int64_t)SIGSEP_FRAME_LEN *
+                     (int64_t)SIGSEP_PLL_STEP_KI_DIV;
+  if (integrator_limit > SIGSEP_PLL_INTEGRATOR_LIMIT)
   {
-    integrator = -SIGSEP_PLL_INTEGRATOR_LIMIT;
+    integrator_limit = SIGSEP_PLL_INTEGRATOR_LIMIT;
+  }
+
+  if (integrator > integrator_limit)
+  {
+    integrator = integrator_limit;
+  }
+  if (integrator < -integrator_limit)
+  {
+    integrator = -integrator_limit;
   }
 
   correction = ((int64_t)phase_error / (int64_t)(SIGSEP_FRAME_LEN * SIGSEP_PLL_STEP_KP_DIV)) +
                (integrator / (int64_t)(SIGSEP_FRAME_LEN * SIGSEP_PLL_STEP_KI_DIV));
 
-  max_corr = (int32_t)(nco_state[ch].nominal_step / SIGSEP_PLL_MAX_CORR_DIV);
   if (correction > (int64_t)max_corr)
   {
     correction = max_corr;
@@ -634,7 +651,9 @@ static int32_t Nco_UpdateLock(uint32_t ch, uint32_t measured_phase, uint64_t fra
 
   nco_state[ch].integrator = integrator;
   nco_state[ch].step_corr = (int32_t)correction;
-  nco_state[ch].phase_ref = predicted_phase + (uint32_t)(phase_error / (int32_t)(1UL << SIGSEP_PLL_PHASE_KP_SHIFT));
+  nco_state[ch].phase_ref = predicted_phase +
+                            (uint32_t)(phase_error /
+                                       (int32_t)(1UL << SIGSEP_PLL_PHASE_KP_SHIFT));
   nco_state[ch].sample_ref = frame_start_sample;
   nco_state[ch].last_error = phase_error;
 

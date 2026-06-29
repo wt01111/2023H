@@ -32,18 +32,19 @@
  * phase loop and derive the other channel's correction from the same time error.
  * Channel 0 is A', channel 1 is B'.
  */
-#define SIGSEP_COMMON_SOURCE_LOCK      0U
+#define SIGSEP_COMMON_SOURCE_LOCK      1U
 #define SIGSEP_PHASE_MASTER_CH         0U
 
 #define SIGSEP_MIN_VALID_ADC_AMP       120.0f
 #define SIGSEP_TRI_H3_RATIO            0.060f
 #define SIGSEP_TRI_H5_RATIO            0.025f
 
-#define SIGSEP_PLL_PHASE_KP_SHIFT      4U
-#define SIGSEP_PLL_STEP_KP_DIV         64U
-#define SIGSEP_PLL_STEP_KI_DIV         1024U
-#define SIGSEP_PLL_MAX_CORR_DIV        50U
-#define SIGSEP_PLL_INTEGRATOR_LIMIT    2147483647LL
+#define SIGSEP_PLL_PHASE_KP_SHIFT      2U
+#define SIGSEP_PLL_STEP_KP_DIV         20U
+#define SIGSEP_PLL_STEP_KI_DIV         200U
+#define SIGSEP_PLL_MAX_CORR_DIV        2000U
+#define SIGSEP_PLL_INTEGRATOR_LIMIT    8589934592LL
+#define SIGSEP_PLL_INTEGRATOR_LEAK_NUM 65535U
 
 #define SIGSEP_AMP_SMOOTH_SHIFT        3U
 #define SIGSEP_UART_TIMEOUT_MS         100U
