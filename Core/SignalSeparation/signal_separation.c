@@ -889,6 +889,25 @@ void SignalSeparation_Task(void)
   }
 }
 
+void SignalSeparation_RestartIdentify(void)
+{
+  uint32_t i;
+
+  __disable_irq();
+  separation_identified = 0U;
+  adc_ready_offset = -1;
+  dac_ready_mask = 0U;
+  __enable_irq();
+
+  identify_frame_count = 0U;
+  for (i = 0U; i < SIGSEP_FREQ_COUNT; i++)
+  {
+    identify_amp_acc[i] = 0.0f;
+  }
+
+  Fill_DacMidscale();
+}
+
 uint8_t SignalSeparation_GetFrequencies(uint32_t *freq0_hz, uint32_t *freq1_hz)
 {
   if (separation_identified == 0U)

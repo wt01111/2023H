@@ -54,6 +54,7 @@
 /* USER CODE BEGIN PV */
 static uint8_t separation_started = 0U;
 static uint8_t frequencies_sent = 0U;
+static uint8_t separate_request = 0U;
 static uint32_t display_freq0_hz = 0U;
 static uint32_t display_freq1_hz = 0U;
 
@@ -124,10 +125,18 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
     SerialScreen_Task();
-    if ((separation_started == 0U) && (SerialScreen_TakeSeparateRequest() != 0U))
+    separate_request = SerialScreen_TakeSeparateRequest();
+    if (separate_request != 0U)
     {
-      SignalSeparation_Start();
-      separation_started = 1U;
+      if (separation_started == 0U)
+      {
+        SignalSeparation_Start();
+        separation_started = 1U;
+      }
+      else
+      {
+        SignalSeparation_RestartIdentify();
+      }
       frequencies_sent = 0U;
     }
     if (separation_started != 0U)
