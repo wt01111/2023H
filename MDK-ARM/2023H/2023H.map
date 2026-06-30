@@ -3774,53 +3774,53 @@ Image Symbol Table
     __arm_cp.1_8                             0x0800929c   Number         4  signal_separation.o(.text.SignalSeparation_Task)
     [Anonymous Symbol]                       0x08009dc8   Section        0  stm32h7xx_it.o(.text.SysTick_Handler)
     [Anonymous Symbol]                       0x08009dd0   Section        0  main.o(.text.SystemClock_Config)
-    [Anonymous Symbol]                       0x08009ea0   Section        0  system_stm32h7xx.o(.text.SystemInit)
-    [Anonymous Symbol]                       0x08009f78   Section        0  stm32h7xx_hal_tim.o(.text.TIM_Base_SetConfig)
-    [Anonymous Symbol]                       0x0800a0f0   Section        0  stm32h7xx_hal_uart.o(.text.UART_AdvFeatureConfig)
-    [Anonymous Symbol]                       0x0800a1d0   Section        0  stm32h7xx_hal_uart.o(.text.UART_CheckIdleState)
-    UART_DMAAbortOnError                     0x0800a341   Thumb Code    12  stm32h7xx_hal_uart.o(.text.UART_DMAAbortOnError)
-    [Anonymous Symbol]                       0x0800a340   Section        0  stm32h7xx_hal_uart.o(.text.UART_DMAAbortOnError)
-    UART_RxISR_16BIT                         0x0800a351   Thumb Code   452  stm32h7xx_hal_uart.o(.text.UART_RxISR_16BIT)
-    [Anonymous Symbol]                       0x0800a350   Section        0  stm32h7xx_hal_uart.o(.text.UART_RxISR_16BIT)
-    UART_RxISR_16BIT_FIFOEN                  0x0800a519   Thumb Code   826  stm32h7xx_hal_uart.o(.text.UART_RxISR_16BIT_FIFOEN)
-    [Anonymous Symbol]                       0x0800a518   Section        0  stm32h7xx_hal_uart.o(.text.UART_RxISR_16BIT_FIFOEN)
-    UART_RxISR_8BIT                          0x0800a859   Thumb Code   456  stm32h7xx_hal_uart.o(.text.UART_RxISR_8BIT)
-    [Anonymous Symbol]                       0x0800a858   Section        0  stm32h7xx_hal_uart.o(.text.UART_RxISR_8BIT)
-    UART_RxISR_8BIT_FIFOEN                   0x0800aa21   Thumb Code   830  stm32h7xx_hal_uart.o(.text.UART_RxISR_8BIT_FIFOEN)
-    [Anonymous Symbol]                       0x0800aa20   Section        0  stm32h7xx_hal_uart.o(.text.UART_RxISR_8BIT_FIFOEN)
-    [Anonymous Symbol]                       0x0800ad60   Section        0  stm32h7xx_hal_uart.o(.text.UART_SetConfig)
-    [Anonymous Symbol]                       0x0800b200   Section        0  stm32h7xx_hal_uart.o(.text.UART_Start_Receive_IT)
-    [Anonymous Symbol]                       0x0800b478   Section        0  stm32h7xx_hal_uart.o(.text.UART_WaitOnFlagUntilTimeout)
-    [Anonymous Symbol]                       0x0800b7d0   Section        0  stm32h7xx_it.o(.text.USART3_IRQHandler)
-    [Anonymous Symbol]                       0x0800b7e0   Section        0  stm32h7xx_it.o(.text.UsageFault_Handler)
-    [Anonymous Symbol]                       0x0800b7e8   Section        0  main.o(.text.main)
-    i.__0snprintf                            0x0800b8c0   Section        0  printfa.o(i.__0snprintf)
-    i.__0vsnprintf                           0x0800b8f4   Section        0  printfa.o(i.__0vsnprintf)
-    i.__scatterload_copy                     0x0800b928   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x0800b936   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x0800b938   Section       14  handlers.o(i.__scatterload_zeroinit)
-    _fp_digits                               0x0800b949   Thumb Code   366  printfa.o(i._fp_digits)
-    i._fp_digits                             0x0800b948   Section        0  printfa.o(i._fp_digits)
-    _printf_core                             0x0800bacd   Thumb Code  1744  printfa.o(i._printf_core)
-    i._printf_core                           0x0800bacc   Section        0  printfa.o(i._printf_core)
-    _printf_post_padding                     0x0800c1a9   Thumb Code    36  printfa.o(i._printf_post_padding)
-    i._printf_post_padding                   0x0800c1a8   Section        0  printfa.o(i._printf_post_padding)
-    _printf_pre_padding                      0x0800c1cd   Thumb Code    46  printfa.o(i._printf_pre_padding)
-    i._printf_pre_padding                    0x0800c1cc   Section        0  printfa.o(i._printf_pre_padding)
-    _snputc                                  0x0800c1fb   Thumb Code    22  printfa.o(i._snputc)
-    i._snputc                                0x0800c1fa   Section        0  printfa.o(i._snputc)
-    .Lswitch.table.UART_SetConfig.7          0x0800c210   Data           6  stm32h7xx_hal_uart.o(.rodata..Lswitch.table.UART_SetConfig.7)
-    .Lswitch.table.UART_SetConfig.9          0x0800c216   Data           6  stm32h7xx_hal_uart.o(.rodata..Lswitch.table.UART_SetConfig.9)
-    SerialScreen_SendTextValue.end_cmd       0x0800c22c   Data           3  serial_screen.o(.rodata.SerialScreen_SendTextValue.end_cmd)
-    [Anonymous Symbol]                       0x0800c22c   Section        0  serial_screen.o(.rodata.SerialScreen_SendTextValue.end_cmd)
-    UARTEx_SetNbDataToProcess.numerator      0x0800c248   Data           8  stm32h7xx_hal_uart_ex.o(.rodata.cst8)
-    [Anonymous Symbol]                       0x0800c248   Section        0  stm32h7xx_hal_uart_ex.o(.rodata.cst8)
-    UARTEx_SetNbDataToProcess.denominator    0x0800c250   Data           8  stm32h7xx_hal_uart_ex.o(.rodata.cst8)
-    .L.str.3                                 0x0800c258   Data          16  serial_screen.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x0800c258   Section        0  serial_screen.o(.rodata.str1.1)
-    .L.str.2                                 0x0800c268   Data           4  signal_separation.o(.rodata.str1.1)
-    [Anonymous Symbol]                       0x0800c268   Section        0  signal_separation.o(.rodata.str1.1)
-    .L.str.3                                 0x0800c26c   Data           4  signal_separation.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x08009e98   Section        0  system_stm32h7xx.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x08009f70   Section        0  stm32h7xx_hal_tim.o(.text.TIM_Base_SetConfig)
+    [Anonymous Symbol]                       0x0800a0e8   Section        0  stm32h7xx_hal_uart.o(.text.UART_AdvFeatureConfig)
+    [Anonymous Symbol]                       0x0800a1c8   Section        0  stm32h7xx_hal_uart.o(.text.UART_CheckIdleState)
+    UART_DMAAbortOnError                     0x0800a339   Thumb Code    12  stm32h7xx_hal_uart.o(.text.UART_DMAAbortOnError)
+    [Anonymous Symbol]                       0x0800a338   Section        0  stm32h7xx_hal_uart.o(.text.UART_DMAAbortOnError)
+    UART_RxISR_16BIT                         0x0800a349   Thumb Code   452  stm32h7xx_hal_uart.o(.text.UART_RxISR_16BIT)
+    [Anonymous Symbol]                       0x0800a348   Section        0  stm32h7xx_hal_uart.o(.text.UART_RxISR_16BIT)
+    UART_RxISR_16BIT_FIFOEN                  0x0800a511   Thumb Code   826  stm32h7xx_hal_uart.o(.text.UART_RxISR_16BIT_FIFOEN)
+    [Anonymous Symbol]                       0x0800a510   Section        0  stm32h7xx_hal_uart.o(.text.UART_RxISR_16BIT_FIFOEN)
+    UART_RxISR_8BIT                          0x0800a851   Thumb Code   456  stm32h7xx_hal_uart.o(.text.UART_RxISR_8BIT)
+    [Anonymous Symbol]                       0x0800a850   Section        0  stm32h7xx_hal_uart.o(.text.UART_RxISR_8BIT)
+    UART_RxISR_8BIT_FIFOEN                   0x0800aa19   Thumb Code   830  stm32h7xx_hal_uart.o(.text.UART_RxISR_8BIT_FIFOEN)
+    [Anonymous Symbol]                       0x0800aa18   Section        0  stm32h7xx_hal_uart.o(.text.UART_RxISR_8BIT_FIFOEN)
+    [Anonymous Symbol]                       0x0800ad58   Section        0  stm32h7xx_hal_uart.o(.text.UART_SetConfig)
+    [Anonymous Symbol]                       0x0800b1f8   Section        0  stm32h7xx_hal_uart.o(.text.UART_Start_Receive_IT)
+    [Anonymous Symbol]                       0x0800b470   Section        0  stm32h7xx_hal_uart.o(.text.UART_WaitOnFlagUntilTimeout)
+    [Anonymous Symbol]                       0x0800b7c8   Section        0  stm32h7xx_it.o(.text.USART3_IRQHandler)
+    [Anonymous Symbol]                       0x0800b7d8   Section        0  stm32h7xx_it.o(.text.UsageFault_Handler)
+    [Anonymous Symbol]                       0x0800b7e0   Section        0  main.o(.text.main)
+    i.__0snprintf                            0x0800b8b8   Section        0  printfa.o(i.__0snprintf)
+    i.__0vsnprintf                           0x0800b8ec   Section        0  printfa.o(i.__0vsnprintf)
+    i.__scatterload_copy                     0x0800b920   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x0800b92e   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x0800b930   Section       14  handlers.o(i.__scatterload_zeroinit)
+    _fp_digits                               0x0800b941   Thumb Code   366  printfa.o(i._fp_digits)
+    i._fp_digits                             0x0800b940   Section        0  printfa.o(i._fp_digits)
+    _printf_core                             0x0800bac5   Thumb Code  1744  printfa.o(i._printf_core)
+    i._printf_core                           0x0800bac4   Section        0  printfa.o(i._printf_core)
+    _printf_post_padding                     0x0800c1a1   Thumb Code    36  printfa.o(i._printf_post_padding)
+    i._printf_post_padding                   0x0800c1a0   Section        0  printfa.o(i._printf_post_padding)
+    _printf_pre_padding                      0x0800c1c5   Thumb Code    46  printfa.o(i._printf_pre_padding)
+    i._printf_pre_padding                    0x0800c1c4   Section        0  printfa.o(i._printf_pre_padding)
+    _snputc                                  0x0800c1f3   Thumb Code    22  printfa.o(i._snputc)
+    i._snputc                                0x0800c1f2   Section        0  printfa.o(i._snputc)
+    .Lswitch.table.UART_SetConfig.7          0x0800c208   Data           6  stm32h7xx_hal_uart.o(.rodata..Lswitch.table.UART_SetConfig.7)
+    .Lswitch.table.UART_SetConfig.9          0x0800c20e   Data           6  stm32h7xx_hal_uart.o(.rodata..Lswitch.table.UART_SetConfig.9)
+    SerialScreen_SendTextValue.end_cmd       0x0800c224   Data           3  serial_screen.o(.rodata.SerialScreen_SendTextValue.end_cmd)
+    [Anonymous Symbol]                       0x0800c224   Section        0  serial_screen.o(.rodata.SerialScreen_SendTextValue.end_cmd)
+    UARTEx_SetNbDataToProcess.numerator      0x0800c240   Data           8  stm32h7xx_hal_uart_ex.o(.rodata.cst8)
+    [Anonymous Symbol]                       0x0800c240   Section        0  stm32h7xx_hal_uart_ex.o(.rodata.cst8)
+    UARTEx_SetNbDataToProcess.denominator    0x0800c248   Data           8  stm32h7xx_hal_uart_ex.o(.rodata.cst8)
+    .L.str.3                                 0x0800c250   Data          16  serial_screen.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x0800c250   Section        0  serial_screen.o(.rodata.str1.1)
+    .L.str.2                                 0x0800c260   Data           4  signal_separation.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x0800c260   Section        0  signal_separation.o(.rodata.str1.1)
+    .L.str.3                                 0x0800c264   Data           4  signal_separation.o(.rodata.str1.1)
     .L_MergedGlobals                         0x24000000   Data           8  stm32h7xx_hal.o(.data..L_MergedGlobals)
     [Anonymous Symbol]                       0x24000000   Section        0  stm32h7xx_hal.o(.data..L_MergedGlobals)
     .L_MergedGlobals                         0x24000008   Data           8  system_stm32h7xx.o(.data..L_MergedGlobals)
@@ -4254,34 +4254,34 @@ Image Symbol Table
     SignalSeparation_Start                   0x08008801   Thumb Code   960  signal_separation.o(.text.SignalSeparation_Start)
     SignalSeparation_Task                    0x08008be9   Thumb Code  4536  signal_separation.o(.text.SignalSeparation_Task)
     SysTick_Handler                          0x08009dc9   Thumb Code     4  stm32h7xx_it.o(.text.SysTick_Handler)
-    SystemClock_Config                       0x08009dd1   Thumb Code   204  main.o(.text.SystemClock_Config)
-    SystemInit                               0x08009ea1   Thumb Code   210  system_stm32h7xx.o(.text.SystemInit)
-    TIM_Base_SetConfig                       0x08009f79   Thumb Code   376  stm32h7xx_hal_tim.o(.text.TIM_Base_SetConfig)
-    UART_AdvFeatureConfig                    0x0800a0f1   Thumb Code   224  stm32h7xx_hal_uart.o(.text.UART_AdvFeatureConfig)
-    UART_CheckIdleState                      0x0800a1d1   Thumb Code   366  stm32h7xx_hal_uart.o(.text.UART_CheckIdleState)
-    UART_SetConfig                           0x0800ad61   Thumb Code  1176  stm32h7xx_hal_uart.o(.text.UART_SetConfig)
-    UART_Start_Receive_IT                    0x0800b201   Thumb Code   628  stm32h7xx_hal_uart.o(.text.UART_Start_Receive_IT)
-    UART_WaitOnFlagUntilTimeout              0x0800b479   Thumb Code   856  stm32h7xx_hal_uart.o(.text.UART_WaitOnFlagUntilTimeout)
-    USART3_IRQHandler                        0x0800b7d1   Thumb Code    12  stm32h7xx_it.o(.text.USART3_IRQHandler)
-    UsageFault_Handler                       0x0800b7e1   Thumb Code     2  stm32h7xx_it.o(.text.UsageFault_Handler)
-    main                                     0x0800b7e9   Thumb Code   216  main.o(.text.main)
-    __0snprintf                              0x0800b8c1   Thumb Code    48  printfa.o(i.__0snprintf)
-    __1snprintf                              0x0800b8c1   Thumb Code     0  printfa.o(i.__0snprintf)
-    __2snprintf                              0x0800b8c1   Thumb Code     0  printfa.o(i.__0snprintf)
-    __c89snprintf                            0x0800b8c1   Thumb Code     0  printfa.o(i.__0snprintf)
-    snprintf                                 0x0800b8c1   Thumb Code     0  printfa.o(i.__0snprintf)
-    __0vsnprintf                             0x0800b8f5   Thumb Code    46  printfa.o(i.__0vsnprintf)
-    __1vsnprintf                             0x0800b8f5   Thumb Code     0  printfa.o(i.__0vsnprintf)
-    __2vsnprintf                             0x0800b8f5   Thumb Code     0  printfa.o(i.__0vsnprintf)
-    __c89vsnprintf                           0x0800b8f5   Thumb Code     0  printfa.o(i.__0vsnprintf)
-    vsnprintf                                0x0800b8f5   Thumb Code     0  printfa.o(i.__0vsnprintf)
-    __scatterload_copy                       0x0800b929   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x0800b937   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x0800b939   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    D1CorePrescTable                         0x0800c21c   Data          16  system_stm32h7xx.o(.rodata.D1CorePrescTable)
-    UARTPrescTable                           0x0800c230   Data          24  stm32h7xx_hal_uart.o(.rodata.UARTPrescTable)
-    Region$$Table$$Base                      0x0800c270   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x0800c290   Number         0  anon$$obj.o(Region$$Table)
+    SystemClock_Config                       0x08009dd1   Thumb Code   200  main.o(.text.SystemClock_Config)
+    SystemInit                               0x08009e99   Thumb Code   210  system_stm32h7xx.o(.text.SystemInit)
+    TIM_Base_SetConfig                       0x08009f71   Thumb Code   376  stm32h7xx_hal_tim.o(.text.TIM_Base_SetConfig)
+    UART_AdvFeatureConfig                    0x0800a0e9   Thumb Code   224  stm32h7xx_hal_uart.o(.text.UART_AdvFeatureConfig)
+    UART_CheckIdleState                      0x0800a1c9   Thumb Code   366  stm32h7xx_hal_uart.o(.text.UART_CheckIdleState)
+    UART_SetConfig                           0x0800ad59   Thumb Code  1176  stm32h7xx_hal_uart.o(.text.UART_SetConfig)
+    UART_Start_Receive_IT                    0x0800b1f9   Thumb Code   628  stm32h7xx_hal_uart.o(.text.UART_Start_Receive_IT)
+    UART_WaitOnFlagUntilTimeout              0x0800b471   Thumb Code   856  stm32h7xx_hal_uart.o(.text.UART_WaitOnFlagUntilTimeout)
+    USART3_IRQHandler                        0x0800b7c9   Thumb Code    12  stm32h7xx_it.o(.text.USART3_IRQHandler)
+    UsageFault_Handler                       0x0800b7d9   Thumb Code     2  stm32h7xx_it.o(.text.UsageFault_Handler)
+    main                                     0x0800b7e1   Thumb Code   216  main.o(.text.main)
+    __0snprintf                              0x0800b8b9   Thumb Code    48  printfa.o(i.__0snprintf)
+    __1snprintf                              0x0800b8b9   Thumb Code     0  printfa.o(i.__0snprintf)
+    __2snprintf                              0x0800b8b9   Thumb Code     0  printfa.o(i.__0snprintf)
+    __c89snprintf                            0x0800b8b9   Thumb Code     0  printfa.o(i.__0snprintf)
+    snprintf                                 0x0800b8b9   Thumb Code     0  printfa.o(i.__0snprintf)
+    __0vsnprintf                             0x0800b8ed   Thumb Code    46  printfa.o(i.__0vsnprintf)
+    __1vsnprintf                             0x0800b8ed   Thumb Code     0  printfa.o(i.__0vsnprintf)
+    __2vsnprintf                             0x0800b8ed   Thumb Code     0  printfa.o(i.__0vsnprintf)
+    __c89vsnprintf                           0x0800b8ed   Thumb Code     0  printfa.o(i.__0vsnprintf)
+    vsnprintf                                0x0800b8ed   Thumb Code     0  printfa.o(i.__0vsnprintf)
+    __scatterload_copy                       0x0800b921   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x0800b92f   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x0800b931   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    D1CorePrescTable                         0x0800c214   Data          16  system_stm32h7xx.o(.rodata.D1CorePrescTable)
+    UARTPrescTable                           0x0800c228   Data          24  stm32h7xx_hal_uart.o(.rodata.UARTPrescTable)
+    Region$$Table$$Base                      0x0800c268   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0800c288   Number         0  anon$$obj.o(Region$$Table)
     uwTickFreq                               0x24000000   Data           1  stm32h7xx_hal.o(.data..L_MergedGlobals)
     uwTickPrio                               0x24000004   Data           4  stm32h7xx_hal.o(.data..L_MergedGlobals)
     SystemCoreClock                          0x24000008   Data           4  system_stm32h7xx.o(.data..L_MergedGlobals)
@@ -4309,7 +4309,7 @@ Memory Map of the image
 
   Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000c2c0, Max: 0x00100000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0000c290, Max: 0x00100000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0000c288, Max: 0x00100000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -4563,56 +4563,55 @@ Memory Map of the image
     0x08008be8   0x08008be8   0x000011e0   Code   RO          210    .text.SignalSeparation_Task  signal_separation.o
     0x08009dc8   0x08009dc8   0x00000004   Code   RO          156    .text.SysTick_Handler  stm32h7xx_it.o
     0x08009dcc   0x08009dcc   0x00000004   PAD
-    0x08009dd0   0x08009dd0   0x000000cc   Code   RO           13    .text.SystemClock_Config  main.o
-    0x08009e9c   0x08009e9c   0x00000004   PAD
-    0x08009ea0   0x08009ea0   0x000000d2   Code   RO         1938    .text.SystemInit    system_stm32h7xx.o
-    0x08009f72   0x08009f72   0x00000006   PAD
-    0x08009f78   0x08009f78   0x00000178   Code   RO         1425    .text.TIM_Base_SetConfig  stm32h7xx_hal_tim.o
-    0x0800a0f0   0x0800a0f0   0x000000e0   Code   RO         1756    .text.UART_AdvFeatureConfig  stm32h7xx_hal_uart.o
-    0x0800a1d0   0x0800a1d0   0x0000016e   Code   RO         1760    .text.UART_CheckIdleState  stm32h7xx_hal_uart.o
-    0x0800a33e   0x0800a33e   0x00000002   PAD
-    0x0800a340   0x0800a340   0x0000000c   Code   RO         1838    .text.UART_DMAAbortOnError  stm32h7xx_hal_uart.o
-    0x0800a34c   0x0800a34c   0x00000004   PAD
-    0x0800a350   0x0800a350   0x000001c4   Code   RO         1878    .text.UART_RxISR_16BIT  stm32h7xx_hal_uart.o
-    0x0800a514   0x0800a514   0x00000004   PAD
-    0x0800a518   0x0800a518   0x0000033a   Code   RO         1874    .text.UART_RxISR_16BIT_FIFOEN  stm32h7xx_hal_uart.o
-    0x0800a852   0x0800a852   0x00000006   PAD
-    0x0800a858   0x0800a858   0x000001c8   Code   RO         1880    .text.UART_RxISR_8BIT  stm32h7xx_hal_uart.o
-    0x0800aa20   0x0800aa20   0x0000033e   Code   RO         1876    .text.UART_RxISR_8BIT_FIFOEN  stm32h7xx_hal_uart.o
-    0x0800ad5e   0x0800ad5e   0x00000002   PAD
-    0x0800ad60   0x0800ad60   0x000004a0   Code   RO         1758    .text.UART_SetConfig  stm32h7xx_hal_uart.o
-    0x0800b200   0x0800b200   0x00000274   Code   RO         1790    .text.UART_Start_Receive_IT  stm32h7xx_hal_uart.o
-    0x0800b474   0x0800b474   0x00000004   PAD
-    0x0800b478   0x0800b478   0x00000358   Code   RO         1774    .text.UART_WaitOnFlagUntilTimeout  stm32h7xx_hal_uart.o
-    0x0800b7d0   0x0800b7d0   0x0000000c   Code   RO          164    .text.USART3_IRQHandler  stm32h7xx_it.o
-    0x0800b7dc   0x0800b7dc   0x00000004   PAD
-    0x0800b7e0   0x0800b7e0   0x00000002   Code   RO          148    .text.UsageFault_Handler  stm32h7xx_it.o
-    0x0800b7e2   0x0800b7e2   0x00000006   PAD
-    0x0800b7e8   0x0800b7e8   0x000000d8   Code   RO           11    .text.main          main.o
-    0x0800b8c0   0x0800b8c0   0x00000034   Code   RO         2206    i.__0snprintf       mc_w.l(printfa.o)
-    0x0800b8f4   0x0800b8f4   0x00000034   Code   RO         2210    i.__0vsnprintf      mc_w.l(printfa.o)
-    0x0800b928   0x0800b928   0x0000000e   Code   RO         2288    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x0800b936   0x0800b936   0x00000002   Code   RO         2289    i.__scatterload_null  mc_w.l(handlers.o)
-    0x0800b938   0x0800b938   0x0000000e   Code   RO         2290    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x0800b946   0x0800b946   0x00000002   PAD
-    0x0800b948   0x0800b948   0x00000184   Code   RO         2212    i._fp_digits        mc_w.l(printfa.o)
-    0x0800bacc   0x0800bacc   0x000006dc   Code   RO         2213    i._printf_core      mc_w.l(printfa.o)
-    0x0800c1a8   0x0800c1a8   0x00000024   Code   RO         2214    i._printf_post_padding  mc_w.l(printfa.o)
-    0x0800c1cc   0x0800c1cc   0x0000002e   Code   RO         2215    i._printf_pre_padding  mc_w.l(printfa.o)
-    0x0800c1fa   0x0800c1fa   0x00000016   Code   RO         2216    i._snputc           mc_w.l(printfa.o)
-    0x0800c210   0x0800c210   0x00000006   Data   RO         1887    .rodata..Lswitch.table.UART_SetConfig.7  stm32h7xx_hal_uart.o
-    0x0800c216   0x0800c216   0x00000006   Data   RO         1888    .rodata..Lswitch.table.UART_SetConfig.9  stm32h7xx_hal_uart.o
-    0x0800c21c   0x0800c21c   0x00000010   Data   RO         1944    .rodata.D1CorePrescTable  system_stm32h7xx.o
-    0x0800c22c   0x0800c22c   0x00000003   Data   RO          197    .rodata.SerialScreen_SendTextValue.end_cmd  serial_screen.o
-    0x0800c22f   0x0800c22f   0x00000001   PAD
-    0x0800c230   0x0800c230   0x00000018   Data   RO         1886    .rodata.UARTPrescTable  stm32h7xx_hal_uart.o
-    0x0800c248   0x0800c248   0x00000010   Data   RO         1929    .rodata.cst8        stm32h7xx_hal_uart_ex.o
-    0x0800c258   0x0800c258   0x00000010   Data   RO          198    .rodata.str1.1      serial_screen.o
-    0x0800c268   0x0800c268   0x00000008   Data   RO          249    .rodata.str1.1      signal_separation.o
-    0x0800c270   0x0800c270   0x00000020   Data   RO         2287    Region$$Table       anon$$obj.o
+    0x08009dd0   0x08009dd0   0x000000c8   Code   RO           13    .text.SystemClock_Config  main.o
+    0x08009e98   0x08009e98   0x000000d2   Code   RO         1938    .text.SystemInit    system_stm32h7xx.o
+    0x08009f6a   0x08009f6a   0x00000006   PAD
+    0x08009f70   0x08009f70   0x00000178   Code   RO         1425    .text.TIM_Base_SetConfig  stm32h7xx_hal_tim.o
+    0x0800a0e8   0x0800a0e8   0x000000e0   Code   RO         1756    .text.UART_AdvFeatureConfig  stm32h7xx_hal_uart.o
+    0x0800a1c8   0x0800a1c8   0x0000016e   Code   RO         1760    .text.UART_CheckIdleState  stm32h7xx_hal_uart.o
+    0x0800a336   0x0800a336   0x00000002   PAD
+    0x0800a338   0x0800a338   0x0000000c   Code   RO         1838    .text.UART_DMAAbortOnError  stm32h7xx_hal_uart.o
+    0x0800a344   0x0800a344   0x00000004   PAD
+    0x0800a348   0x0800a348   0x000001c4   Code   RO         1878    .text.UART_RxISR_16BIT  stm32h7xx_hal_uart.o
+    0x0800a50c   0x0800a50c   0x00000004   PAD
+    0x0800a510   0x0800a510   0x0000033a   Code   RO         1874    .text.UART_RxISR_16BIT_FIFOEN  stm32h7xx_hal_uart.o
+    0x0800a84a   0x0800a84a   0x00000006   PAD
+    0x0800a850   0x0800a850   0x000001c8   Code   RO         1880    .text.UART_RxISR_8BIT  stm32h7xx_hal_uart.o
+    0x0800aa18   0x0800aa18   0x0000033e   Code   RO         1876    .text.UART_RxISR_8BIT_FIFOEN  stm32h7xx_hal_uart.o
+    0x0800ad56   0x0800ad56   0x00000002   PAD
+    0x0800ad58   0x0800ad58   0x000004a0   Code   RO         1758    .text.UART_SetConfig  stm32h7xx_hal_uart.o
+    0x0800b1f8   0x0800b1f8   0x00000274   Code   RO         1790    .text.UART_Start_Receive_IT  stm32h7xx_hal_uart.o
+    0x0800b46c   0x0800b46c   0x00000004   PAD
+    0x0800b470   0x0800b470   0x00000358   Code   RO         1774    .text.UART_WaitOnFlagUntilTimeout  stm32h7xx_hal_uart.o
+    0x0800b7c8   0x0800b7c8   0x0000000c   Code   RO          164    .text.USART3_IRQHandler  stm32h7xx_it.o
+    0x0800b7d4   0x0800b7d4   0x00000004   PAD
+    0x0800b7d8   0x0800b7d8   0x00000002   Code   RO          148    .text.UsageFault_Handler  stm32h7xx_it.o
+    0x0800b7da   0x0800b7da   0x00000006   PAD
+    0x0800b7e0   0x0800b7e0   0x000000d8   Code   RO           11    .text.main          main.o
+    0x0800b8b8   0x0800b8b8   0x00000034   Code   RO         2206    i.__0snprintf       mc_w.l(printfa.o)
+    0x0800b8ec   0x0800b8ec   0x00000034   Code   RO         2210    i.__0vsnprintf      mc_w.l(printfa.o)
+    0x0800b920   0x0800b920   0x0000000e   Code   RO         2288    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x0800b92e   0x0800b92e   0x00000002   Code   RO         2289    i.__scatterload_null  mc_w.l(handlers.o)
+    0x0800b930   0x0800b930   0x0000000e   Code   RO         2290    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x0800b93e   0x0800b93e   0x00000002   PAD
+    0x0800b940   0x0800b940   0x00000184   Code   RO         2212    i._fp_digits        mc_w.l(printfa.o)
+    0x0800bac4   0x0800bac4   0x000006dc   Code   RO         2213    i._printf_core      mc_w.l(printfa.o)
+    0x0800c1a0   0x0800c1a0   0x00000024   Code   RO         2214    i._printf_post_padding  mc_w.l(printfa.o)
+    0x0800c1c4   0x0800c1c4   0x0000002e   Code   RO         2215    i._printf_pre_padding  mc_w.l(printfa.o)
+    0x0800c1f2   0x0800c1f2   0x00000016   Code   RO         2216    i._snputc           mc_w.l(printfa.o)
+    0x0800c208   0x0800c208   0x00000006   Data   RO         1887    .rodata..Lswitch.table.UART_SetConfig.7  stm32h7xx_hal_uart.o
+    0x0800c20e   0x0800c20e   0x00000006   Data   RO         1888    .rodata..Lswitch.table.UART_SetConfig.9  stm32h7xx_hal_uart.o
+    0x0800c214   0x0800c214   0x00000010   Data   RO         1944    .rodata.D1CorePrescTable  system_stm32h7xx.o
+    0x0800c224   0x0800c224   0x00000003   Data   RO          197    .rodata.SerialScreen_SendTextValue.end_cmd  serial_screen.o
+    0x0800c227   0x0800c227   0x00000001   PAD
+    0x0800c228   0x0800c228   0x00000018   Data   RO         1886    .rodata.UARTPrescTable  stm32h7xx_hal_uart.o
+    0x0800c240   0x0800c240   0x00000010   Data   RO         1929    .rodata.cst8        stm32h7xx_hal_uart_ex.o
+    0x0800c250   0x0800c250   0x00000010   Data   RO          198    .rodata.str1.1      serial_screen.o
+    0x0800c260   0x0800c260   0x00000008   Data   RO          249    .rodata.str1.1      signal_separation.o
+    0x0800c268   0x0800c268   0x00000020   Data   RO         2287    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x0800c290, Size: 0x00000000, Max: 0x00020000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x0800c288, Size: 0x00000000, Max: 0x00020000, ABSOLUTE)
 
     **** No section assigned to this execution region ****
 
@@ -4670,7 +4669,7 @@ Image component sizes
         84          0          0          0          0       5404   dma.o
         86          0          0          0         56       5444   fmac.o
         68          0          0          0          0       2255   gpio.o
-       430          0          0          0         16       3534   main.o
+       426          0          0          0         16       3519   main.o
        924         32         19          0        212      10760   serial_screen.o
       9380        124          8          8      13101      41034   signal_separation.o
         44         12        716          0       1024        844   startup_stm32h723xx.o
@@ -4698,9 +4697,9 @@ Image component sizes
        486          0          0          0        296       8833   usart.o
 
     ----------------------------------------------------------------------
-     44964        896        844         24      15352     479704   Object Totals
+     44956        896        844         24      15352     479689   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-       416         16          1          0         35          0   (incl. Padding)
+       412         16          1          0         35          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -4755,15 +4754,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     48964       1004        844         24      15352     480268   Grand Totals
-     48964       1004        844         24      15352     480268   ELF Image Totals
-     48964       1004        844         24          0          0   ROM Totals
+     48956       1004        844         24      15352     480253   Grand Totals
+     48956       1004        844         24      15352     480253   ELF Image Totals
+     48956       1004        844         24          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                49808 (  48.64kB)
+    Total RO  Size (Code + RO Data)                49800 (  48.63kB)
     Total RW  Size (RW Data + ZI Data)             15376 (  15.02kB)
-    Total ROM Size (Code + RO Data + RW Data)      49832 (  48.66kB)
+    Total ROM Size (Code + RO Data + RW Data)      49824 (  48.66kB)
 
 ==============================================================================
 
