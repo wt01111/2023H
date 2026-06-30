@@ -37,4 +37,5 @@
   ..\Core\Inc\adc.h ..\Core\Inc\cordic.h ..\Core\Inc\dac.h \
   ..\Core\Inc\dma.h ..\Core\Inc\fmac.h ..\Core\Inc\tim.h \
   ..\Core\Inc\usart.h ..\Core\Inc\gpio.h \
-  ..\Core\SignalSeparation\signal_separation.h
+  ..\Core\SignalSeparation\signal_separation.h \
+  ..\Core\Inc\serial_screen.h

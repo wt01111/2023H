@@ -39,7 +39,7 @@
 #define SIGSEP_TRI_H3_RATIO            0.060f
 #define SIGSEP_TRI_H5_RATIO            0.025f
 
-#define SIGSEP_PLL_PHASE_KP_SHIFT      2U
+#define SIGSEP_PLL_PHASE_KP_SHIFT      1U
 #define SIGSEP_PLL_STEP_KP_DIV         20U
 #define SIGSEP_PLL_STEP_KI_DIV         200U
 #define SIGSEP_PLL_MAX_CORR_DIV        2000U

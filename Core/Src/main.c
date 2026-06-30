@@ -30,6 +30,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "signal_separation.h"
+#include "serial_screen.h"
 
 /* USER CODE END Includes */
 
@@ -51,6 +52,10 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+static uint8_t separation_started = 0U;
+static uint8_t frequencies_sent = 0U;
+static uint32_t display_freq0_hz = 0U;
+static uint32_t display_freq1_hz = 0U;
 
 /* USER CODE END PV */
 
@@ -105,8 +110,9 @@ int main(void)
   MX_FMAC_Init();
   MX_TIM2_Init();
   MX_USART1_UART_Init();
+  MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
-  SignalSeparation_Start();
+  SerialScreen_Init();
 
   /* USER CODE END 2 */
 
@@ -117,7 +123,23 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    SignalSeparation_Task();
+    SerialScreen_Task();
+    if ((separation_started == 0U) && (SerialScreen_TakeSeparateRequest() != 0U))
+    {
+      SignalSeparation_Start();
+      separation_started = 1U;
+      frequencies_sent = 0U;
+    }
+    if (separation_started != 0U)
+    {
+      SignalSeparation_Task();
+      if ((frequencies_sent == 0U) &&
+          (SignalSeparation_GetFrequencies(&display_freq0_hz, &display_freq1_hz) != 0U))
+      {
+        SerialScreen_SendFrequencies(display_freq0_hz, display_freq1_hz);
+        frequencies_sent = 1U;
+      }
+    }
   }
   /* USER CODE END 3 */
 }

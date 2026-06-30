@@ -11,6 +11,7 @@
 "2023h\usart.o"
 "2023h\stm32h7xx_it.o"
 "2023h\stm32h7xx_hal_msp.o"
+"2023h\serial_screen.o"
 "2023h\signal_separation.o"
 "2023h\stm32h7xx_hal_adc.o"
 "2023h\stm32h7xx_hal_adc_ex.o"

@@ -889,6 +889,25 @@ void SignalSeparation_Task(void)
   }
 }
 
+uint8_t SignalSeparation_GetFrequencies(uint32_t *freq0_hz, uint32_t *freq1_hz)
+{
+  if (separation_identified == 0U)
+  {
+    return 0U;
+  }
+
+  if (freq0_hz != NULL)
+  {
+    *freq0_hz = active_comp[0].freq_hz;
+  }
+  if (freq1_hz != NULL)
+  {
+    *freq1_hz = active_comp[1].freq_hz;
+  }
+
+  return 1U;
+}
+
 void HAL_ADC_ConvHalfCpltCallback(ADC_HandleTypeDef *hadc)
 {
   if (hadc->Instance == ADC1)
