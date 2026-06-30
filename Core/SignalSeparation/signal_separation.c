@@ -17,6 +17,11 @@
 #include <stdarg.h>
 #include <stdio.h>
 
+#define SIGSEP_PHASE_OFFSET_DEFAULT_DEG 150
+#define SIGSEP_PHASE_OFFSET_MIN_DEG     0
+#define SIGSEP_PHASE_OFFSET_MAX_DEG     180
+#define SIGSEP_PHASE_OFFSET_STEP_DEG    5
+
 typedef enum
 {
   WAVE_SINE = 0,
@@ -72,6 +77,7 @@ static volatile uint64_t dac_ready_play_sample[2];
 static volatile uint32_t dac_ready_mask = 0;
 static volatile uint32_t dac_half_overrun = 0;
 static volatile uint8_t separation_identified = 0;
+static volatile int32_t output_phase_offset_deg = SIGSEP_PHASE_OFFSET_DEFAULT_DEG;
 static uint32_t identify_frame_count = 0;
 
 static void Debug_Printf(const char *fmt, ...);
@@ -109,6 +115,7 @@ static void Nco_FollowCommonSource(uint32_t follower_ch, uint32_t master_ch,
                                    int32_t master_phase_error, uint64_t frame_start_sample);
 static int32_t Scale_PhaseErrorByFreq(int32_t phase_error, uint32_t dst_hz, uint32_t src_hz);
 static int32_t Scale_StepCorrection(uint32_t follower_ch, uint32_t master_ch);
+static int32_t Normalize_PhaseOffsetDeg(int32_t deg);
 static uint32_t PhaseOffsetDeg_To_Q32(int32_t deg);
 static uint32_t PhaseStep_Q32(uint32_t freq_hz);
 
@@ -575,6 +582,34 @@ static uint32_t PhaseOffsetDeg_To_Q32(int32_t deg)
   return (uint32_t)(((int64_t)deg * 4294967296LL) / 360LL);
 }
 
+static int32_t Normalize_PhaseOffsetDeg(int32_t deg)
+{
+  int32_t rem;
+
+  if (deg < SIGSEP_PHASE_OFFSET_MIN_DEG)
+  {
+    deg = SIGSEP_PHASE_OFFSET_MIN_DEG;
+  }
+  if (deg > SIGSEP_PHASE_OFFSET_MAX_DEG)
+  {
+    deg = SIGSEP_PHASE_OFFSET_MAX_DEG;
+  }
+
+  rem = deg % SIGSEP_PHASE_OFFSET_STEP_DEG;
+  deg -= rem;
+  if (rem >= ((SIGSEP_PHASE_OFFSET_STEP_DEG + 1) / 2))
+  {
+    deg += SIGSEP_PHASE_OFFSET_STEP_DEG;
+  }
+
+  if (deg > SIGSEP_PHASE_OFFSET_MAX_DEG)
+  {
+    deg = SIGSEP_PHASE_OFFSET_MAX_DEG;
+  }
+
+  return deg;
+}
+
 static void Nco_Init(uint32_t ch, const SignalComponent *comp, uint64_t sample_start)
 {
   nco_state[ch].nominal_step = PhaseStep_Q32(comp->freq_hz);
@@ -720,8 +755,10 @@ static void Nco_FollowCommonSource(uint32_t follower_ch, uint32_t master_ch,
 static void Fill_DacHalf(uint32_t half_index, uint64_t play_sample)
 {
   uint32_t dst_offset = half_index * SIGSEP_DAC_HALF_LEN;
+  int32_t phase_offset_deg = output_phase_offset_deg;
   uint32_t phase0 = Nco_PhaseAtSample(0U, play_sample) + PhaseOffsetDeg_To_Q32(SIGSEP_DAC1_PHASE_OFFSET_DEG);
-  uint32_t phase1 = Nco_PhaseAtSample(1U, play_sample) + PhaseOffsetDeg_To_Q32(SIGSEP_DAC2_PHASE_OFFSET_DEG);
+  uint32_t phase1 = Nco_PhaseAtSample(1U, play_sample) +
+                    PhaseOffsetDeg_To_Q32(SIGSEP_DAC2_PHASE_OFFSET_DEG + phase_offset_deg);
 
   Build_DacSamples(&dac1_dma_buf[dst_offset], &active_comp[0], phase0, Nco_Step(0U), SIGSEP_DAC_HALF_LEN);
   Build_DacSamples(&dac2_dma_buf[dst_offset], &active_comp[1], phase1, Nco_Step(1U), SIGSEP_DAC_HALF_LEN);
@@ -906,6 +943,16 @@ void SignalSeparation_RestartIdentify(void)
   }
 
   Fill_DacMidscale();
+}
+
+void SignalSeparation_SetPhaseOffsetDeg(int32_t deg)
+{
+  output_phase_offset_deg = Normalize_PhaseOffsetDeg(deg);
+}
+
+int32_t SignalSeparation_GetPhaseOffsetDeg(void)
+{
+  return output_phase_offset_deg;
 }
 
 uint8_t SignalSeparation_GetFrequencies(uint32_t *freq0_hz, uint32_t *freq1_hz)

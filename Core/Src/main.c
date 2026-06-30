@@ -55,6 +55,7 @@
 static uint8_t separation_started = 0U;
 static uint8_t frequencies_sent = 0U;
 static uint8_t separate_request = 0U;
+static int32_t phase_set_value = 0;
 static uint32_t display_freq0_hz = 0U;
 static uint32_t display_freq1_hz = 0U;
 
@@ -125,6 +126,10 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
     SerialScreen_Task();
+    if (SerialScreen_TakePhaseSetRequest(&phase_set_value) != 0U)
+    {
+      SignalSeparation_SetPhaseOffsetDeg(phase_set_value);
+    }
     separate_request = SerialScreen_TakeSeparateRequest();
     if (separate_request != 0U)
     {
